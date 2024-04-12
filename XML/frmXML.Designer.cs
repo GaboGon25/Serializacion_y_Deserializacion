@@ -83,7 +83,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label5.Location = new Point(449, 59);
             label5.Name = "label5";
             label5.Size = new Size(130, 65);
@@ -96,6 +96,7 @@
             txtCuenta.Name = "txtCuenta";
             txtCuenta.Size = new Size(544, 39);
             txtCuenta.TabIndex = 5;
+            txtCuenta.KeyPress += txtCuenta_KeyPress;
             // 
             // txtPrimerNombre
             // 
@@ -103,6 +104,7 @@
             txtPrimerNombre.Name = "txtPrimerNombre";
             txtPrimerNombre.Size = new Size(544, 39);
             txtPrimerNombre.TabIndex = 6;
+            txtPrimerNombre.KeyPress += txtPrimerNombre_KeyPress;
             // 
             // txtPrimerApellido
             // 
@@ -110,6 +112,7 @@
             txtPrimerApellido.Name = "txtPrimerApellido";
             txtPrimerApellido.Size = new Size(544, 39);
             txtPrimerApellido.TabIndex = 7;
+            txtPrimerApellido.KeyPress += txtPrimerApellido_KeyPress;
             // 
             // txtSaldo
             // 
@@ -117,6 +120,7 @@
             txtSaldo.Name = "txtSaldo";
             txtSaldo.Size = new Size(544, 39);
             txtSaldo.TabIndex = 8;
+            txtSaldo.KeyPress += txtSaldo_KeyPress;
             // 
             // dgvXML
             // 
@@ -129,30 +133,36 @@
             // 
             // btnSerializarXML
             // 
+            btnSerializarXML.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             btnSerializarXML.Location = new Point(44, 841);
             btnSerializarXML.Name = "btnSerializarXML";
             btnSerializarXML.Size = new Size(197, 107);
             btnSerializarXML.TabIndex = 10;
             btnSerializarXML.Text = "SERIALIZAR";
             btnSerializarXML.UseVisualStyleBackColor = true;
+            btnSerializarXML.Click += btnSerializarXML_Click;
             // 
             // btnDeserializarXML
             // 
+            btnDeserializarXML.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             btnDeserializarXML.Location = new Point(289, 841);
             btnDeserializarXML.Name = "btnDeserializarXML";
             btnDeserializarXML.Size = new Size(193, 107);
             btnDeserializarXML.TabIndex = 11;
             btnDeserializarXML.Text = "DESERIALIZAR";
             btnDeserializarXML.UseVisualStyleBackColor = true;
+            btnDeserializarXML.Click += btnDeserializarXML_Click;
             // 
             // btnInsertarXML
             // 
+            btnInsertarXML.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             btnInsertarXML.Location = new Point(536, 841);
             btnInsertarXML.Name = "btnInsertarXML";
             btnInsertarXML.Size = new Size(174, 107);
             btnInsertarXML.TabIndex = 12;
             btnInsertarXML.Text = "INSERTAR";
             btnInsertarXML.UseVisualStyleBackColor = true;
+            btnInsertarXML.Click += btnInsertarXML_Click;
             // 
             // frmXML
             // 

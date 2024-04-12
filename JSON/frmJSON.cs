@@ -17,7 +17,7 @@ namespace Serializacion_y_Deserializacion
         {
             InitializeComponent();
         }
-
+        Validaciones validar = new Validaciones();
         private void btnInsertarJSON_Click(object sender, EventArgs e)
         {
             Persona persona = new Persona();
@@ -83,14 +83,14 @@ namespace Serializacion_y_Deserializacion
         }
 
         private void btnDeserializarJSON_Click(object sender, EventArgs e)
-        {           
-            DialogResult result; 
-            string fileName; 
+        {
+            DialogResult result;
+            string fileName;
 
             using (OpenFileDialog fileChooser = new OpenFileDialog())
             {
                 result = fileChooser.ShowDialog();
-                fileName = fileChooser.FileName; 
+                fileName = fileChooser.FileName;
             }
 
             if (result == DialogResult.OK)
@@ -114,7 +114,7 @@ namespace Serializacion_y_Deserializacion
 
                         dgvJSON.DataSource = personas;
 
-                        btnDeserializarJSON.Enabled = false; 
+                        btnDeserializarJSON.Enabled = false;
                     }
                     catch (Exception ex)
                     {
@@ -123,7 +123,29 @@ namespace Serializacion_y_Deserializacion
                     }
                 }
             }
+            MessageBox.Show("Archivo deserializado correctamente", string.Empty,
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+        }
+
+        private void txtCuenta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.ValidarNumero(sender, e);
+        }
+
+        private void txtPrimerNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.ValidarLetra(sender, e);
+        }
+
+        private void txtPrimerApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.ValidarLetra(sender, e);
+        }
+
+        private void txtSaldo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validar.ValidarNumero(sender, e);
         }
     }
 }

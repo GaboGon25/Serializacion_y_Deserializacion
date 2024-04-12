@@ -36,15 +36,16 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 22.125F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Segoe UI", 22.125F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(96, 99);
             label1.Name = "label1";
-            label1.Size = new Size(704, 78);
+            label1.Size = new Size(761, 78);
             label1.TabIndex = 0;
-            label1.Text = "Escoga el tipo de formato";
+            label1.Text = "Escoga el tipo de formato ";
             // 
             // btnXML
             // 
+            btnXML.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             btnXML.Location = new Point(241, 549);
             btnXML.Name = "btnXML";
             btnXML.Size = new Size(394, 125);
@@ -55,6 +56,8 @@
             // 
             // btnJSON
             // 
+            btnJSON.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            btnJSON.ForeColor = SystemColors.ActiveCaptionText;
             btnJSON.Location = new Point(241, 297);
             btnJSON.Name = "btnJSON";
             btnJSON.Size = new Size(394, 125);

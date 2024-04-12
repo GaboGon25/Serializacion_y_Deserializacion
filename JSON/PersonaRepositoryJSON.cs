@@ -50,10 +50,10 @@ namespace Serializacion_y_Deserializacion
         public void SerializarLista(List<Persona> personas, string rutaArchivo)
         {
             var strJson = JsonConvert.SerializeObject(personas, Formatting.Indented);
-            SaveFileEmpresa(strJson, rutaArchivo);
+            SaveFilePersona(strJson, rutaArchivo);
         }
 
-        private void SaveFileEmpresa(string strJson, string rutaArchivo)
+        private void SaveFilePersona(string strJson, string rutaArchivo)
         {
             try
             {
